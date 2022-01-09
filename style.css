@@ -1,0 +1,235 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Very Dark Magenta: hsl(300, 43%, 22%)
+Soft Pink: hsl(333, 80%, 67%)
+
+### Neutral
+
+Dark Grayish Magenta: hsl(303, 10%, 53%)
+Light Grayish Magenta: hsl(300, 24%, 96%)
+White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Spartan](https://fonts.google.com/specimen/Spartan)
+- Weights: 400, 500, 700
+
+*/
+
+
+* {
+    box-sizing: border-box;
+    font-size: 0.9375rem;
+    font-family: 'Spartan', sans-serif;
+}
+
+/* Background */
+body {
+    background-image: url("./images/bg-pattern-top-mobile.svg"), url("./images/bg-pattern-bottom-mobile.svg");
+    background-position: left top, left bottom;
+    background-repeat: no-repeat;
+}
+
+/* Container to center the element */
+#showcase {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 90%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+    
+}
+
+h1 {
+    font-size: 2rem;
+    color: hsl(300, 43%, 22%);
+}
+
+.text > p {
+    color: hsl(303, 10%, 53%);
+}
+
+.reviews {
+    width: 100%;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul, ol {
+    padding: 0;
+    width: 100%;
+    list-style-type: none;
+
+    display: flex;
+}
+
+ol {
+    flex-direction: row;
+    justify-content: center;
+}
+
+ul {
+    flex-direction: column;
+    align-items: center;
+}
+
+.constellation > li {
+    margin: 5px;
+}
+
+.reviews > li {
+    width: 100%;
+    padding: 10px 0;
+    margin: 6px 0;
+    border-radius: 10px;
+    background-color: hsl(300, 24%, 96%);
+}
+
+.reviews span {
+    color: hsl(300, 43%, 22%);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.comments > li {
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.comments p{
+    color: hsl(300, 24%, 96%);
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    text-align: left;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    vertical-align: middle;
+}
+
+.profileText {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    text-align: left;
+}
+
+.profileText > span {
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+.profileText span {
+    color: white;
+    font-weight: 700;
+}
+
+.profileText span+span {
+    color: hsl(333, 80%, 67%);
+}
+
+.profile img {
+    width: 2.2rem;
+    border-radius: 100%;
+}
+
+@media only screen and (min-width:769px) {
+    #showcase {
+        height: 100vh;
+    }
+    .card {
+        flex-flow: row wrap;
+        width: 80%
+    }
+    .text {
+        width: 40%;
+        text-align: left;
+    }
+    .reviews {
+        width: 60%;
+    }
+    .reviews div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    .reviews > li {
+        width: 70%;
+    }
+    ol {
+        width: auto;
+    }
+    .reviews span {
+        vertical-align: middle;
+        ;
+    }
+    .reviews > li:nth-child(1) {
+        margin-right: 5rem;
+    }
+    .reviews > li:nth-child(3) {
+        margin-left: 5rem;
+    }
+    .comments {
+        flex-direction: row;
+        gap: 3rem;
+    }
+    
+    .comments > li:nth-child(1) {
+        margin-bottom: 2.5rem;
+    }
+
+    .comments > li:nth-child(3) {
+        margin-top: 2.5rem;
+    }
+}
+
+.attribution {
+font-size: 11px;
+text-align: center;
+}
+.attribution a {
+color: hsl(228, 45%, 44%);
+}
